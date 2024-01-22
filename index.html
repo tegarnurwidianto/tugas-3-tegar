@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Kamar Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Form Pemesanan Kamar Hotel</h2>
+        <form action="process.php" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+
+            <label for="tipe_kamar">Tipe Kamar:</label>
+            <select name="tipe_kamar">
+                <option value="standar">Standar</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <label for="check_in">Check-in Date:</label>
+            <input type="date" name="check_in" required>
+
+            <label for="check_out">Check-out Date:</label>
+            <input type="date" name="check_out" required>
+
+            <label for="jumlah_kamar">Jumlah Kamar:</label>
+            <input type="number" name="jumlah_kamar" value="1" min="1" required>
+
+            <!-- Informasi Pembayaran -->
+            <label for="nomor_kartu">Nomor Kartu Kredit:</label>
+            <input type="text" name="nomor_kartu" required>
+
+            <label for="tanggal_kadaluarsa">Tanggal Kadaluarsa:</label>
+            <input type="text" name="tanggal_kadaluarsa" placeholder="MM/YYYY" required>
+
+            <label for="nama_pemilik_kartu">Nama Pemilik Kartu:</label>
+            <input type="text" name="nama_pemilik_kartu" required>
+
+            <button type="submit">Pesan Kamar & Bayar</button>
+        </form>
+    </div>
+</body>
+</html>
